@@ -28,7 +28,7 @@ jobs:
       - name: Deploy to Github page
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
-          ACCESS_TOKEN: ${{ secrets.DEPLOY_TONE_JS_SAMPLER_1 }}
+          ACCESS_TOKEN: ${{ secrets.DEPLOY_TONE_JS_SAMPLER }}
           BRANCH: master # The branch the action should deploy to.
           FOLDER: src # The folder the action should deploy.
           REPOSITORY_NAME: mydatahack/mydatahack.github.io
