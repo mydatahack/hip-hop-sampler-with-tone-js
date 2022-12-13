@@ -1,0 +1,17 @@
+{
+  "name": "hip-hop-sampler-with-tone-js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:mydatahack/hip-hop-sampler-with-tone-js.git",
+  "license": "MIT",
+  "scripts": {
+    "start": "live-server src",
+    "start-p5": "live-server src-p5",
+    "start-examples": "live-server src-examples",
+    "lint": "./node_modules/.bin/eslint ./"
+  },
+  "devDependencies": {
+    "live-server": "1.2.1",
+    "eslint": "^8.29.0"
+  }
+}
