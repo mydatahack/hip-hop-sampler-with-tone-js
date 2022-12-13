@@ -1,0 +1,36 @@
+name: Deploy to GitHub Page
+on:
+  push:
+    branches:
+      - main
+jobs:
+  run-test-deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node-version: [16.x]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install
+        run: |
+          yarn install
+      - name: Checking lint
+        run: |
+          yarn lint
+      - name: Deploy to Github page
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          ACCESS_TOKEN: ${{ secrets.DEPLOY_TONE_JS_SAMPLER_1 }}
+          BRANCH: master # The branch the action should deploy to.
+          FOLDER: public # The folder the action should deploy.
+          REPOSITORY_NAME: mydatahack/mydatahack.github.io
+          TARGET_FOLDER: tonejs-sampler-1
+          CLEAN: true # Automatically remove deleted files from the deploy branch
