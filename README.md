@@ -2,7 +2,7 @@
 
 Making a hip hop sampler with [tone.js](https://tonejs.github.io/) for free-style rap performance.
 
-All the track sounds were coded by using `tone.js` and `JavaScript`. No sample is used except the scratch sound and crowd noise.
+All the track sounds were coded by using [tone.js](https://tonejs.github.io/) and JavaScript. No sample is used except the scratch sound and crowd noise.
 
 ## Sampler
 
@@ -10,4 +10,4 @@ All the track sounds were coded by using `tone.js` and `JavaScript`. No sample i
 
 It starts with a basic drum beat and you can toggle other parts in and out. Clicking the record on the right will make scratch noise. Confetti button is magic 🦄'🦄'🦄'
 
-In addition to `tone.js`, we are using [fireworks.js](https://fireworks.js.org/) for the fireworks effect and [js-confetti](https://www.npmjs.com/package/js-confetti) for generating emoji confetti🥳
+In addition to [tone.js](https://tonejs.github.io/), we are using [fireworks.js](https://fireworks.js.org/) for the fireworks effect and [js-confetti](https://www.npmjs.com/package/js-confetti) for generating emoji confetti🥳
