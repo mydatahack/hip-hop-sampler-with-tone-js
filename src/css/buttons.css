@@ -1,3 +1,50 @@
-.button {
-  width: 20px;
+.button-row {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.player-button {
+  width: 120px;
+  margin: 20px;
+}
+
+.player-button-group {
+  display: flex;
+  justify-content: center;
+}
+
+.trigger-button {
+  width: 140px;
+  margin: 20px;
+}
+.confetti {
+  color: white;
+  background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+}
+
+@media (max-width:992px) { 
+  .trigger-button-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+  }
+  .trigger-button {
+    width: auto;
+    margin: 4px;
+  }
+
+
+  .player-button-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+  }
+  .player-button {
+    width: auto;
+    margin: 4px;
+  }
 }

@@ -18,24 +18,31 @@
   <div class="container">
     <div class="row record-player-row">
       <div class="col d-flex justify-content-center">
-        <div class="record-img d-flex justify-content-center">
+        <div class="record-img d-flex justify-content-center record-img-container">
           <img src="img/analog-record.svg" />
         </div>
       </div>
       <div class="col d-flex justify-content-center">
-        <div class="record-img-2 d-flex justify-content-center">
+        <div class="record-img-2 d-flex justify-content-center record-img-container">
           <img class="scratch-record" src="img/Raseone-Record.svg" />
         </div>
       </div>
     </div>
-    <div class="row">
-      <button class="play-button">Play</button>
-      <button class="stop-button">Stop</button>
-      <button class="hi-hat-controller">Hi-Hat Trigger</button>
-      <button class="bass-controller">bass Trigger</button>
-      <button class="synth1-controller">Synth1 Trigger</button>
-      <button class="synthLead1-controller">SynthLead Trigger</button>
-      <button class="confetti">Confetti</button>
+    <div class="button-row">
+      <div class="player-button-group">
+        <button class="play-button btn btn-primary player-button">▶️</button>
+        <button class="stop-button btn btn-secondary player-button" >⏹️</button>
+      </div>
+    </div>
+    <div class="button-row justify-content-center">
+      <div class="trigger-button-group">
+
+      <button class="hi-hat-controller btn btn-success trigger-button">Funky Hi-Hats</button>
+      <button class="bass-controller btn btn-dark trigger-button">Groovy Bass</button>
+      <button class="synth1-controller btn btn-danger trigger-button">Sweet Chords</button>
+      <button class="synthLead1-controller btn btn-info trigger-button">Bangin' Hook</button>
+      <button class="confetti btn trigger-button">Confetti</button>
+    </div>
     </div>
   </div>
 

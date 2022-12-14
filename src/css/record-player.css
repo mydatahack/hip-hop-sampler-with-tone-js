@@ -1,7 +1,11 @@
 .record-player-row {
   margin: 40px;
 }
-.record-img {
+
+.record-img-container {
+  margin: 20px;
+}
+.record-img-container {
   width: 363px;
   height: 354px;
 }
@@ -10,9 +14,12 @@
   animation: spin-record 2s linear infinite;
 }
 
-.record-img-2 {
-  width: 363px;
-  height: 354px;
+@media (max-width:380px) { 
+  .record-img-container {
+    width: 250px;
+    height: 250px;
+
+  }
 }
 
 .record-img-2.animate {
