@@ -1,0 +1,52 @@
+.record-player-row {
+  margin: 40px;
+}
+.record-img {
+  width: 363px;
+  height: 354px;
+}
+
+.record-img.animate {
+  animation: spin-record 2s linear infinite;
+}
+
+.record-img-2 {
+  width: 363px;
+  height: 354px;
+}
+
+.record-img-2.animate {
+  animation: scratch-record 1s linear;
+}
+
+@keyframes spin-record {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes scratch-record {
+	0% {
+		transform: rotate(0deg);
+	}
+
+  25% {
+		transform: rotate(40deg);
+	}
+
+  50% {
+		transform: rotate(10deg);
+	}
+
+  75% {
+    transform: rotate(35deg);
+  }
+
+	100% {
+		transform: rotate(0deg);
+	}
+}

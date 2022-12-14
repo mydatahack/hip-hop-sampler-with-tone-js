@@ -5,16 +5,43 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hip Hop Sampler</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="css/global.css" rel="stylesheet">
+  <link href="css/record-player.css" rel="stylesheet">
+  <link href="css/buttons.css" rel="stylesheet">
   <script src="https://unpkg.com/tone@next"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+  <script src="lib/fireworks.umd.js"></script>
 </head>
 <body>
-  <h2>Play Track</h2>
-  <button class="play-button">Play</button>
-  <button class="stop-button">Stop</button>
-  <button class="hi-hat-controller">Hi-Hat Trigger</button>
-  <button class="bass-controller">bass Trigger</button>
-  <button class="synth1-controller">Synth1 Trigger</button>
-  <button class="synthLead1-controller">SynthLead Trigger</button>
-<script src="./js/track.js"></script>
+  <div class="fireworks"></div>
+  <div class="container">
+    <div class="row record-player-row">
+      <div class="col d-flex justify-content-center">
+        <div class="record-img d-flex justify-content-center">
+          <img src="img/analog-record.svg" />
+        </div>
+      </div>
+      <div class="col d-flex justify-content-center">
+        <div class="record-img-2 d-flex justify-content-center">
+          <img class="scratch-record" src="img/Raseone-Record.svg" />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <button class="play-button">Play</button>
+      <button class="stop-button">Stop</button>
+      <button class="hi-hat-controller">Hi-Hat Trigger</button>
+      <button class="bass-controller">bass Trigger</button>
+      <button class="synth1-controller">Synth1 Trigger</button>
+      <button class="synthLead1-controller">SynthLead Trigger</button>
+      <button class="confetti">Confetti</button>
+    </div>
+  </div>
+
+<script src="./js/audio-synthesis.js"></script>
+<script src="./js/audio-samples.js"></script>
+<script src="./js/visual-effects.js"></script>
+<script src="./js/event-handlers.js"></script>
 </body>
 </html>

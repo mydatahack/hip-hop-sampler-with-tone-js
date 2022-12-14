@@ -11,7 +11,10 @@
     "lint": "./node_modules/.bin/eslint ./"
   },
   "devDependencies": {
-    "live-server": "1.2.1",
-    "eslint": "^8.29.0"
+    "eslint": "^8.29.0",
+    "live-server": "1.2.1"
+  },
+  "dependencies": {
+    "fireworks-js": "^2.10.0"
   }
 }

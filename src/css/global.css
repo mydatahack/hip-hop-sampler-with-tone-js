@@ -1,0 +1,22 @@
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+     background-image: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
+
+     background-color: #85FFBD;
+background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+
+background-image: linear-gradient(to right, #2e2e2e 0%, rgb(48, 48, 48) 100%);
+}
+
+
+.fireworks {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}

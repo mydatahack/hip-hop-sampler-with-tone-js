@@ -12,5 +12,6 @@ module.exports = {
     quotes: [2, 'single'],
     indent: ['error', 2],
     'eol-last': ['error', 'always']
-  }
+  },
+  ignorePatterns: ['**/lib/*.js']
 };
