@@ -2,7 +2,7 @@ Tone.Transport.bpm.value = 107;
 
 // Setting Gain
 const gainKick = new Tone.Gain(1);
-const gainHiHat = new Tone.Gain(0.1);
+const gainHiHat = new Tone.Gain(0.8);
 const gainSnare = new Tone.Gain(2);
 const gainBass = new Tone.Gain(2.5);
 const gainPolySynth = new Tone.Gain(0.6);
@@ -36,8 +36,8 @@ const compressor = new Tone.Compressor({
 const hiHatEq = new Tone.EQ3(
   {
     lowLevel: 0.5,
-    midLevel: 2,
-    highLevel: 1
+    midLevel: 1,
+    highLevel: 2
   }
 );
 
@@ -73,8 +73,8 @@ const hiHat = new Tone.MetalSynth({
   frequency  : 600,
   envelope  : {
     attack  : 0.001 ,
-    decay  : 0.1 ,
-    release  : 0.2
+    decay  : 0.03 ,
+    release  : 0.05
   }  ,
   harmonicity  : 5.1 ,
   modulationIndex  : 32 ,
