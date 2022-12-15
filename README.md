@@ -11,3 +11,7 @@ All the track sounds were coded by using [tone.js](https://tonejs.github.io/) an
 It starts with a basic drum beat and you can toggle other parts in and out. Clicking the record on the right will make scratch noise. Confetti button is magic 🦄'🦄'🦄'
 
 In addition to [tone.js](https://tonejs.github.io/), we are using [fireworks.js](https://fireworks.js.org/) for the fireworks effect and [js-confetti](https://www.npmjs.com/package/js-confetti) for generating emoji confetti🥳
+
+## Reference
+
+[Sound Engineer Mixing Guide by me](https://github.com/mydatahack/sound-engineer-mixing-guide)
