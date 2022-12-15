@@ -8,23 +8,22 @@ const gainBass = new Tone.Gain(2.5);
 const gainPolySynth = new Tone.Gain(0.6);
 const gainLeadSynth = new Tone.Gain(0.2);
 
-// Effect
+// Effects
 const distortion = new Tone.Distortion({
   distortion: 0.1,
   oversample: '4x', // none, 2x, 4x
 });
 const reverb = new Tone.Reverb(0.75, 1000);
 
-// Setup a reverb with ToneJS
 const reverbLeadSynth = new Tone.Reverb({
   decay: 4,
   wet: 0.2,
   preDelay: 0.25,
 });
 
-
-
 const feedbackDelay = new Tone.FeedbackDelay('8n', 0.25);
+
+// Compressor
 const compressor = new Tone.Compressor({
   ratio: 5,
   threshold: -12,
@@ -33,6 +32,21 @@ const compressor = new Tone.Compressor({
   knee: 10,
 });
 
+// Equalizer - 3 band frequencies (https://tonejs.github.io/docs/14.7.77/EQ3)
+const hiHatEq = new Tone.EQ3(
+  {
+    lowLevel: 0.5,
+    midLevel: 2,
+    highLevel: 1
+  }
+);
+
+// Filter - https://tonejs.github.io/docs/14.7.77/Filter
+const lowPassfilterForKick = new Tone.Filter({
+  frequency: 8000,
+});
+
+// Kick
 gainKick.chain(compressor, Tone.Master);
 const kick = new Tone.MembraneSynth({
   pitchDecay:0.05,
@@ -53,12 +67,13 @@ const kick = new Tone.MembraneSynth({
   }
 }).connect(gainKick);
 
-gainHiHat.chain(reverb, Tone.Master);
+// Hi Hat
+gainHiHat.chain(hiHatEq, reverb, Tone.Master);
 const hiHat = new Tone.MetalSynth({
   frequency  : 600,
   envelope  : {
     attack  : 0.001 ,
-    decay  : 1.4 ,
+    decay  : 0.1 ,
     release  : 0.2
   }  ,
   harmonicity  : 5.1 ,
