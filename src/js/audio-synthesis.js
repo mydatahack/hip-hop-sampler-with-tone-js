@@ -37,7 +37,7 @@ const hiHatEq = new Tone.EQ3(
   {
     lowLevel: 0.5,
     midLevel: 1,
-    highLevel: 2
+    highLevel: 2.5
   }
 );
 
@@ -47,7 +47,7 @@ const lowPassfilterForKick = new Tone.Filter({
 });
 
 // Kick
-gainKick.chain(compressor, Tone.Master);
+gainKick.chain(lowPassfilterForKick, compressor, Tone.Master);
 const kick = new Tone.MembraneSynth({
   pitchDecay:0.05,
   octaves: 4,
@@ -97,10 +97,6 @@ const snareDrum = new Tone.NoiseSynth({
   },
 }).connect(gainSnare);
 
-// const lowPass = new Tone.Filter({
-//   frequency: 8000,
-// }).toMaster();
-
 const kickLoop = new Tone.Loop(time => {
   kick.triggerAttackRelease('C1', '8n', time);
 }, '4n');
@@ -129,7 +125,7 @@ const bass = new Tone.Synth({
 // Base sequence
 const baseSequence = new Tone.Sequence((time, note) => {
   bass.triggerAttackRelease(note, '4n', time);
-}, [['F#0', 'F#0'], [ ,'E0'], 'F0', , , 'B0', , 'D1',])
+}, [['F#0', 'F#0'], [ ,'Bb0'], 'F0', , , 'B0', , 'D1',])
   .start(0);
 
 // Keybord 1 Sequence
